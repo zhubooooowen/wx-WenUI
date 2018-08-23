@@ -1,0 +1,44 @@
+/* components/SkidRemove/skidremove.wxss */
+
+.skidremove {
+  overflow: hidden;
+}
+
+.item {
+  width: 100%;
+  height: 160rpx;
+  background: #2c2d32;
+  margin-bottom: 20rpx;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.title {
+  position: absolute;
+  width: 200rpx;
+  height: 160rpx;
+  top: 0;
+  left: 20rpx;
+  text-align: center;
+  line-height: 160rpx;
+  color: #e1e1e4;
+  font-size: 28rpx;
+}
+
+.delete {
+  position: absolute;
+  width: 200rpx;
+  height: 160rpx;
+  top: 0;
+  right: -200rpx;
+  text-align: center;
+  line-height: 160rpx;
+  background: #d6f046;
+  color: #383941;
+  font-size: 28rpx;
+}
+
+.item.active {
+  transform: translateX(-200rpx);
+  transition: all 0.3s ease;
+}

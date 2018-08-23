@@ -1,0 +1,275 @@
+/**index.wxss**/
+
+.indexMap {
+  width: 100%;
+  margin: 0 auto;
+  height: 400rpx;
+}
+
+.map {
+  width: 100%;
+  height: 1200rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.map .mapBg {
+  width: 100%;
+  height: 1200rpx;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+}
+
+.map .location-l {
+  width: 300rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 20rpx;
+  z-index: 10;
+  right: 30rpx;
+}
+
+.map .location {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 145rpx;
+  z-index: 10;
+  right: 155rpx;
+  /* 设置padding是增加点击范围 */
+  padding: 10rpx;
+}
+
+.map .location2 {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 190rpx;
+  z-index: 10;
+  left: 50rpx;
+  padding: 10rpx;
+}
+
+.map .location2-l {
+  width: 300rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 65rpx;
+  z-index: 10;
+  left: -75rpx;
+}
+
+.map .location3 {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 260rpx;
+  z-index: 10;
+  left: 220rpx;
+  padding: 10rpx;
+}
+
+.map .location3-l {
+  width: 300rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 135rpx;
+  z-index: 10;
+  left: 95rpx;
+}
+
+.mapScale {
+  animation: move 1s;
+}
+
+@keyframes move {
+  from {
+    transform: scale(0.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.map .address {
+  font-size: 40rpx;
+  position: absolute;
+  left: 30rpx;
+  z-index: 10;
+  top: 30rpx;
+  color: #e1e1e4;
+  letter-spacing: 2rpx;
+  font-weight: 400;
+}
+
+.map .store {
+  font-size: 32rpx;
+  position: absolute;
+  left: 30rpx;
+  z-index: 10;
+  top: 90rpx;
+  color: #e1e1e4;
+}
+
+.map .info {
+  position: absolute;
+  top: 740rpx;
+  left: 3%;
+  text-align: center;
+  width: 94%;
+}
+
+.map .info image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+
+.map .info view {
+  font-size: 28rpx;
+  color: #d6f046;
+  text-align: center;
+  letter-spacing: 4rpx;
+}
+
+.nav {
+  width: 40%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 3vw;
+  margin-top: 20rpx;
+  position: relative;
+  z-index: 10000;
+}
+
+.record {
+  line-height: 60rpx;
+  text-align: center;
+  flex: 1;
+  color: #383941;
+  font-size: 28rpx;
+  border-radius: 0 10rpx 10rpx 0;
+}
+
+.mall {
+  line-height: 60rpx;
+  text-align: center;
+  color: #383941;
+  flex: 1;
+  font-size: 28rpx;
+  border-radius: 10rpx 0 0 10rpx;
+}
+
+.default {
+  background: #2c2d32;
+  color: #e1e1e4;
+}
+
+.select {
+  background: #d6f046;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.recordInfo {
+  width: 94%;
+  margin: 20rpx auto;
+}
+
+.mallInfo {
+  width: 94%;
+  margin: 20rpx auto;
+  margin-bottom: 0;
+}
+
+.comList {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.item {
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #2c2d32;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+}
+
+.item view {
+  position: absolute;
+  height: 100rpx;
+  line-height: 100rpx;
+  top: 0;
+  color: #e1e1e4;
+  font-size: 28rpx;
+}
+
+.item .title {
+  left: 3%;
+}
+
+.item .arrow {
+  right: 3%;
+  font-weight: 700;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.componentTitle {
+  margin: 20rpx 0;
+  color: #d6f046;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.tip {
+  width: 94%;
+  margin: 0 auto 20rpx;
+  background: #2c2d32;
+  border-radius: 20rpx;
+}
+
+.tip view {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #e1e1e4;
+  display: inline-block;
+  width: 47%;
+  padding-left: 3%;
+}
+
+.footer {
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 60rpx;
+}
+
+.footer .title {
+  color: #d6f046;
+}
+
+.footer .info {
+  color: #e1e1e4;
+}

@@ -1,0 +1,38 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+  background: #383941;
+  padding-bottom: 20rpx;
+  font-weight: 300;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+canvas {
+  width: auto;
+  height: 400rpx;
+}
+
+image {
+  width: auto;
+  height: auto;
+}

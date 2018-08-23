@@ -1,0 +1,191 @@
+/* pages/courseDatiles/courseDetails.wxss */
+
+.courseVideo {
+  width: 100%;
+  height: 400rpx;
+}
+
+.courseVideo image {
+  width: 100%;
+}
+
+.introduce {
+  position: relative;
+  width: 94%;
+  margin: 0 auto;
+  margin-top: -40rpx;
+  height: 400rpx;
+  background: #2c2d32;
+  border-radius: 30rpx;
+}
+
+.introduce image {
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  right: 60rpx;
+  top: -60rpx;
+  border-radius: 60rpx;
+}
+
+.introduce .content {
+  position: absolute;
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+  color: #e1e1e4;
+  top: 50%;
+  line-height: 36rpx;
+  width: 94%;
+  padding: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
+
+.introduce .title {
+  position: absolute;
+  font-size: 32rpx;
+  letter-spacing: 4rpx;
+  color: #d6f046;
+  top: 20rpx;
+  line-height: 40rpx;
+  padding: 0;
+  left: 20rpx;
+  font-weight: 400;
+}
+
+.introduce view image {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.introduce view view {
+  display: inline-block;
+}
+
+.introduce .fire , .introduce .time {
+  position: absolute;
+  bottom: 30rpx;
+  color: #d6f046;
+  font-size: 24rpx;
+  width: 70rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding-left: 40rpx;
+  letter-spacing: 2rpx;
+}
+
+.introduce .fire {
+  right: 50rpx;
+}
+
+.introduce .time {
+  right: 190rpx;
+}
+
+.desc {
+  width: 94%;
+  margin: 0 auto;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #2c2d32;
+}
+
+.title {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #e1e1e4;
+  letter-spacing: 2rpx;
+}
+
+.line {
+  height: 40rpx;
+  width: 6rpx;
+  background: #d6f046;
+  display: inline-block;
+  position: relative;
+  top: 8rpx;
+}
+
+.peopleList {
+  padding-bottom: 10rpx;
+}
+
+.peopleList view {
+  float: left;
+  width: 25%;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #fff;
+  margin-top: 12rpx;
+}
+
+.peopleList view view {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #2c2d32;
+  border-radius: 25rpx;
+  font-size: 24rpx;
+  letter-spacing: 1rpx;
+}
+
+.content {
+  padding: 20rpx 20rpx 0;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.btnWrap {
+  width: 450rpx;
+  margin: 0 auto;
+}
+
+.reservation {
+  width: 200rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #d6f046;
+  margin: 30rpx auto;
+  margin-bottom: 20rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  letter-spacing: 2rpx;
+  font-size: 28rpx;
+  display: inline-block;
+}
+
+.reservation + .reservation {
+  margin-left: 50rpx;
+}
+
+.checkbox {
+  display: block;
+  width: 100%;
+  margin: 10rpx auto;
+  background: #2c2d32;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 10%;
+  box-sizing: border-box;
+  color: #e1e1e4;
+  font-size: 26rpx;
+  letter-spacing: 2rpx;
+}
+
+.checkbox checkbox {
+  margin-right: 40rpx;
+}
+
+.slot {
+  text-align: center;
+}

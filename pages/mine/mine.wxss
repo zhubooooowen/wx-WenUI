@@ -1,0 +1,100 @@
+/* pages/mine/mine.wxss */
+
+.info {
+  position: relative;
+  height: 400rpx;
+  overflow: hidden;
+}
+
+.info .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.info .card {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 30rpx;
+}
+
+.info .card image{
+  width: 100%;
+  height: 100%;
+  border-radius: 30rpx;
+}
+
+.info .card .title{
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+  text-align: left;
+  font-size: 50rpx;
+  font-weight: 400;
+}
+
+.info .card .title view {
+  display: inline-block;
+  font-size: 36rpx;
+}
+
+.info .card .idea{
+  position: absolute;
+  left: 30rpx;
+  top: 110rpx;
+  text-align: left;
+  font-size: 24rpx;
+}
+
+.info .card .cardInfo{
+  position: absolute;
+  left: 30rpx;
+  bottom: 30rpx;
+  text-align: left;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+}
+
+.info .card .left{
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  border-radius: 0 30rpx 30rpx 0;
+  right: 0;
+  top: 0;
+}
+
+.info .card .left image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20rpx;
+}
+
+.info .card .left .btn{
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20rpx;
+  font-size: 24rpx;
+  border: 1rpx solid #383941;
+  letter-spacing: 4rpx;
+  color: #383941;
+  font-weight: 400;
+  padding: 0;
+}

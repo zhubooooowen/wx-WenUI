@@ -1,0 +1,41 @@
+/* components/Uploader/uploader.wxss */
+
+.uploader {
+  width: 94%;
+  margin: 0 auto;
+  line-height: 30vw;
+}
+
+.uploader .item {
+  width: 30vw;
+  height: 30vw;
+  font-size: 100rpx;
+  color: #e1e1e4;
+  background: #2c2d32;
+  float: left;
+  margin-bottom: 20rpx;
+}
+
+.item + .item {
+  margin-left: 2%;
+}
+
+.item:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.uploader .item text {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploader .item image {
+  display: flex;
+  width: 30vw;
+  height: 30vw;
+  align-items: center;
+  justify-content: center;
+}

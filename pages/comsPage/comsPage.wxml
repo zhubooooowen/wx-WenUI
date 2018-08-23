@@ -1,0 +1,54 @@
+<!--pages/comPages/comPages.wxml-->
+<view wx:if='{{path==="progress"}}' class='item'>
+  <view class='title'>进度条组件</view>
+  <progress percentage="{{percentage2}}"></progress>
+  <progress percentage="{{percentage3}}" background="red"></progress>
+  <progress percentage="{{percentage4}}" background="skyblue"></progress>
+  <progress percentage="{{percentage}}" background="orange"></progress>
+  <button bindtap='changeProgress'>更改进度</button>
+</view>
+<view wx:if='{{path==="toast"}}' class='item'>
+  <view class='title'>轻提示组件</view>
+  <button bindtap='showToast'>提示</button>
+  <toast text='提示' isShow="{{is_toast_Show}}"></toast>
+  <button bindtap='showToast5s'>提示(5s)</button>
+  <toast text='提示(5s)' isShow="{{is_toast_Show_5s}}" interval='5000'></toast>
+  <button bindtap='showToastSuccess'>提示(成功)</button>
+  <toast text='这是一个成功提示' isShow="{{is_toast_Show_success}}" status="success"></toast>
+  <button bindtap='showToastWarn'>提示(警告)</button>
+  <toast text='这是一个警告提示' isShow="{{is_toast_Show_warn}}" status="warn"></toast>
+</view>
+<view wx:if='{{path==="modal"}}' class='item'>
+  <view class='title'>弹框组件</view>
+  <button bindtap='showModal'>展示弹框</button>
+  <modal modal-hidden="{{is_modal_Hidden}}" modal-msg="弹框内容" bindModalSure="onMyEvent">
+    <view class='slot'>这是插入到slot中的内容</view>
+  </modal>
+  <toast text='{{modal_data}}' isShow="{{is_toast_Show_modal}}"></toast>
+</view>
+<view wx:if='{{path==="actionsheet"}}' class='item actionsheet'>
+  <view class='title'>上拉菜单组件</view>
+  <button class='asButton' bindtap='showActionsheet'>上拉菜单</button>
+  <actionsheet isShow="{{is_actionsheet_Show}}" title="上拉菜单" list="{{actionsheetList}}" bindRedirect="onMyRedirect">
+  </actionsheet>
+</view>
+<view wx:if='{{path==="stepper"}}' class='myStepper'>
+  <view class='title'>步进器组件</view>
+  <view class='tip'>基础用法(step为1,最小值为1,最大值为10)</view>
+  <view>
+    <stepper bindMyAddStep="onMyAddStep" bindMySubtractStep="onMySubtractStep"></stepper>
+  </view>
+  <view class='tip'>
+    进阶用法(step为5,最小值为5,最大值为100,初始值为20)</view>
+  <view>
+    <stepper bindMyAddStep="onMyAddStep" bindMySubtractStep="onMySubtractStep" min="5" max="100" step="5" initialValue="20"></stepper>
+  </view>
+</view>
+<view wx:if='{{path==="skid"}}' class='item'>
+  <view class='title'>侧滑删除组件</view>
+  <skidremove list="{{skidremoveList}}"></skidremove>
+</view>
+<view wx:if='{{path==="uploader"}}' class='item'>
+  <view class='title'>图片上传组件(4张)</view>
+  <uploader num="4" bindUpload="onMyUpload"></uploader>
+</view>

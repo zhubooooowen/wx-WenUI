@@ -1,0 +1,99 @@
+/* pages/data/data.wxss */
+
+.header {
+  position: relative;
+  height: 140rpx;
+  width: 94%;
+  margin: 0 auto;
+  color: #e1e1e4;
+}
+
+.header view {
+  position: absolute;
+  left: 2vw;
+  font-weight: 300;
+}
+
+.header .title {
+  font-size: 72rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  letter-spacing: 2rpx;
+}
+
+.header .info {
+  top: 90rpx;
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+}
+
+.header image {
+  position: absolute;
+  right: 2vw;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  top: 30rpx;
+}
+
+.graphicData {
+  width: 94%;
+  margin: 20rpx auto;
+  position: relative;
+  height: 100rpx;
+}
+
+.graphicData .line {
+  width: 100%;
+  height: 2rpx;
+  background: #7d848e;
+  position: absolute;
+  top: 40rpx;
+}
+
+.graphicData .week, .graphicData .month {
+  position: absolute;
+  top: -20rpx;
+}
+
+.graphicData .week .circle, .graphicData .month .circle {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 1px solid #7d848e;
+  background: #383941;
+  position: relative;
+}
+
+.graphicData .week .circle .smallCircle,
+.graphicData .month .circle .smallCircle {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  background: #d6f046;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.graphicData .week .name, .graphicData .month .name {
+  font-size: 24rpx;
+  color: #e1e1e4;
+  letter-spacing: 6rpx;
+  position: relative;
+  top: 10rpx;
+  left: -4rpx;
+}
+
+.graphicData .week {
+  left: 20vw;
+}
+
+.graphicData .month {
+  right: 20vw;
+}
+
+.canvas {
+  width: 100%;
+}

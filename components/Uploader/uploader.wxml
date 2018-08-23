@@ -1,0 +1,9 @@
+<!--components/Uploader/uploader.wxml-->
+<view class='uploader'>
+  <view class='item' wx:for="{{tempFilePaths}}" data-url="{{item}}" bindtap='previewImage'>
+    <image src='{{item}}' mode='aspectFill'></image>
+  </view>
+  <view class='item' bindtap='uploadImg' wx:if="{{isShowBtn}}">
+    <text>+</text>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<!--components/calendar/calendar.wxml-->
+<view class='weekWrap'>
+  <view class='month'>
+    <view class='name'>月</view>
+    <view class='num'>{{month}}</view>
+  </view>
+  <view class='week'>
+    <view wx:for="{{week}}" wx:key="{{item}}" class='day'>{{item}}</view>
+  </view>
+  <swiper class='calendarSwiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block>
+      <swiper-item>
+        <view wx:for="{{thisWeek.week }}" wx:for-index="idx" wx:key="{{item}}" class='day'>
+          <view id='{{item}}' data-month='{{thisWeek.month[idx]}}' bindtap='chooseDay' class="{{thisDay==item?'dayWrap':''}}">
+            {{item}}
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view wx:for="{{nextWeek.week }}" wx:for-index="idx" wx:key="{{item}}" class='day'>
+          <view id='{{item}}' data-month='{{nextWeek.month[idx]}}' bindtap='chooseDay' class="{{thisDay==item?'dayWrap':''}}">
+            {{item}}
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view wx:for="{{thirdWeek.week }}" wx:for-index="idx" wx:key="{{item}}" class='day'>
+          <view id='{{item}}' data-month='{{thirdWeek.month[idx]}}' bindtap='chooseDay' class="{{thisDay==item?'dayWrap':''}}">
+            {{item}}
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view wx:for="{{fourthWeek.week }}" wx:for-index="idx" wx:key="{{item}}" class='day'>
+          <view id='{{item}}' data-month='{{fourthWeek.month[idx]}}' bindtap='chooseDay' class="{{thisDay==item?'dayWrap':''}}">
+            {{item}}
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

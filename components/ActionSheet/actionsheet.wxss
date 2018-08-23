@@ -1,0 +1,49 @@
+/* components/Actionsheet/actionsheet.wxss */
+
+.actionsheet {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.asMask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  background: rgba(0, 0, 0, .6);
+  overflow: hidden;
+  left: 0;
+  top: 0;
+}
+
+.wrap {
+  width: 100%;
+  color: #e1e1e4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  z-index: 10000;
+  animation: move .5s ease;
+}
+
+.wrap view {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background:#2c2d32;
+}
+
+.wrap .cancel {
+  margin-top: 20rpx;
+}
+
+@keyframes move {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}

@@ -1,0 +1,27 @@
+/* components/Progress/progress.wxss */
+.progress-father {
+  height: 40rpx;
+  width: 94%;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  background: #bbb;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.progress-son {
+  width: 0;
+  height: 40rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.progress-father text {
+  position: absolute;
+  height: 40rpx;
+  line-height: 40rpx;
+  top: 0;
+  right: 10rpx;
+  color: #e1e1e4;
+  font-size: 24rpx;
+}

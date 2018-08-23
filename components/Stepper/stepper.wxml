@@ -1,0 +1,8 @@
+<!--components/Stepper/stepper.wxml-->
+<view class='stepper'>
+  <!-- 减时输入框的值大于最小值减号可用 -->
+  <view class='subtract {{initialValue>min?"":"disabled"}}' data-disabled="{{initialValue>min?'':'disabled'}}" bindtap="subtractStep">-</view>
+  <input value='{{initialValue}}' bindblur='inputBlur' />
+  <!-- 加时输入框的值小于最大值加号可用 -->
+  <view class='add {{initialValue<max?"":"disabled"}}' data-disabled="{{initialValue<max?'':'disabled'}}" bindtap="addStep">+</view>
+</view>

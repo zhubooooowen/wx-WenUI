@@ -1,0 +1,76 @@
+<!--pages/courseDatiles/courseDetails.wxml-->
+<view class='courseVideo'>
+  <image src='https://p3a.pstatp.com/weili/l/208004046442987534.jpg' mode='widthFix'></image>
+</view>
+<view class='introduce'>
+  <image src='/imgs/4.jpg'></image>
+  <view class='title'>上肢力量训练</view>
+  <view class='content'>
+    将二头和三头的动作交叉起来练，也就是练一组二头，立马 转头去练三头，他俩是对抗及，在练二头的时候三头相当于是在放松，所以这种训练很省时间，但是很累，练完的效果会很棒，每个动作做3组*12次+1组大重量6次向心和6次离心动作，组见不休息，如果实在是 太累可以休息30s
+  </view>
+  <view class='fire'>
+    <image src='/imgs/fire2.png'></image>400Cal
+  </view>
+  <view class='time'>
+    <image src='/imgs/time2.png'></image>60Min
+  </view>
+</view>
+<view class='desc'>
+  <view class='title'>
+    <view class='line'></view>
+    适应人群
+  </view>
+  <view class='peopleList clearfix'>
+    <view wx:for="{{people}}">
+      <view>
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class='desc'>
+  <view class='title'>
+    <view class='line'></view>
+    训练效果
+  </view>
+  <view class='content'>
+    如果健身负荷适宜，在工作和生活中就会精力旺盛，思想集中，思维敏捷，记忆清晰，有信心，生活能力强
+  </view>
+</view>
+<view class='desc'>
+  <view class='title'>
+    <view class='line'></view>
+    注意事项
+  </view>
+  <view class='content'>
+    健身负荷适宜，在工作和生活中就会精力旺盛，思想集中
+  </view>
+</view>
+<view class='desc'>
+  <view class='title'>
+    <view class='line'></view>
+    预约说明
+  </view>
+  <view class='content'>
+    健身负荷适宜，在工作和生活中就会精力旺盛，思想集中，思维敏捷，记忆清晰，适应能力强，有信心，生活能力强
+  </view>
+</view>
+<view class='desc'>
+  <view class='title'>
+    <view class='line'></view>
+    此课程时间列表
+  </view>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" disabled='{{item.disabled}}' />{{item.value}}
+    </label>
+  </checkbox-group>
+</view>
+<view class='btnWrap'>
+  <view class='reservation' bindtap='toReservation'>预约选中课程</view>
+  <view class='reservation' bindtap='toReservation'>全部预约</view>
+</view>
+<modal modal-hidden="{{is_modal_Hidden}}" modal-msg="{{is_modal_Msg}}" bindModalSure="onMyEvent">
+  <!-- <view class='slot'>这是插入到slot中的内容</view> -->
+</modal>
+<toast text="{{'预约成功'}}" isShow="{{is_toast_show}}" interval="2000"></toast>

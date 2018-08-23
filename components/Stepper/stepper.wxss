@@ -1,0 +1,48 @@
+/* components/Stepper/stepper.wxss */
+
+.stepper {
+  width: 240rpx;
+  height: 60rpx;
+  position: relative;
+}
+
+.stepper view {
+  display: inline-block;
+  width: 80rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: absolute;
+  top: 0;
+  border:1rpx solid #2c2d32;
+  box-sizing: border-box;
+  color: #e1e1e4;
+}
+
+.stepper .add {
+  right: 0;
+}
+
+.stepper .subtract {
+  left: 0;
+}
+
+.stepper view.disabled {
+  background: #2c2d32;
+  border-color: #2c2d32;
+}
+
+.stepper input {
+  display: inline-block;
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: absolute;
+  top: 0;
+  left: 80rpx;
+  border-top:1rpx solid #2c2d32;
+  border-bottom:1rpx solid #2c2d32;
+  text-align: center;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}

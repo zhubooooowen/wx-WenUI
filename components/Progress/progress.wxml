@@ -1,0 +1,5 @@
+<!--components/Progress/progress.wxml-->
+<view class='progress-father'>
+  <view class='progress-son' style="width:{{percentage}}%;background:{{background}}; transition: width 1s;"></view>
+  <text>{{percentage}}%</text>
+</view>

@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/courseDetails/courseDetails",
+    "pages/data/data",
+    "pages/reservation/reservation",
+    "pages/mine/mine",
+    "pages/course/course",
+    "components/Modal/modal",
+    "components/Toast/toast",
+    "components/Calendar/calendar",
+    "components/Progress/progress",
+    "pages/comsPage/comsPage",
+    "components/ActionSheet/actionsheet",
+    "components/Stepper/stepper",
+    "components/SkidRemove/skidremove",
+    "components/Uploader/uploader"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2c2d32",
+    "navigationBarTitleText": "欧文的文",
+    "navigationBarTextStyle": "white"
+  }
+}

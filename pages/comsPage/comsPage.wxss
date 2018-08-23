@@ -1,0 +1,39 @@
+/* pages/comPages/comPages.wxss */
+
+.item .title {
+  text-align: center;
+  margin: 40rpx 0;
+  color: #e1e1e4;
+  font-size: 32rpx;
+}
+
+.item button {
+  width: 25%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  background: #d6f046;
+  color: #383941;
+}
+
+.slot {
+  text-align: center;
+}
+
+.myStepper .title {
+  text-align: center;
+  margin: 40rpx 0;
+  color: #e1e1e4;
+  font-size: 32rpx;
+}
+
+.myStepper .tip {
+  color: #e1e1e4;
+  font-size: 28rpx;
+}
+
+.myStepper>view {
+  padding-left: 3vw;
+  margin-bottom: 40rpx;
+}

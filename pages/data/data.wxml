@@ -1,0 +1,26 @@
+<!--pages/data/data.wxml-->
+<view class='header'>
+  <view class='title'>Active</view>
+  <view class='info'>健身状况评估为活跃</view>
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+</view>
+<view class='graphicData'>
+  <view class='line'>
+    <view class='week'>
+      <view class='circle' bindtap='showSmallCircle' data-name='week'>
+        <view class='smallCircle' wx:if="{{showSmallCircle.showWeekSmallCircle}}"></view>
+      </view>
+      <view class='name'>本周</view>
+    </view>
+    <view class='month'>
+      <view class='circle' bindtap='showSmallCircle' data-name='month'>
+        <view class='smallCircle' wx:if="{{showSmallCircle.showMonthSmallCircle}}"></view>
+      </view>
+      <view class='name'>本月</view>
+    </view>
+  </view>
+</view>
+<view>
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"></canvas>
+    <canvas canvas-id="radarCanvas" disable-scroll="true" class="canvas"></canvas>
+</view>

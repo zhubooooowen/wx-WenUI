@@ -1,0 +1,131 @@
+/* pages/reservation/reservation.wxss */
+
+.header {
+  position: relative;
+}
+
+.header image {
+  width: 100%;
+}
+
+.header view {
+  position: absolute;
+  left: 3vw;
+  bottom: 40rpx;
+  color: #fff;
+  font-size: 48rpx;
+}
+
+.info {
+  padding: 5vw 10vw 0;
+}
+
+.info .item {
+  color: #e1e1e4;
+  width: 100%;
+  border-bottom: 1px solid #2c2d32;
+  padding: 14rpx 0;
+}
+
+.info .item view {
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.info .item view + view {
+  margin-left: 40rpx;
+}
+
+.info .stepperWrap {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0;
+}
+
+.info .stepper {
+  height: 100rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+
+.info .stepperTitle {
+  position: relative;
+  bottom: 20rpx;
+}
+
+.map {
+  margin-right: 0;
+  background: #2c2d32;
+  padding: 4rpx;
+  font-size: 24rpx;
+}
+
+.discount {
+  padding: 20rpx 0;
+}
+
+.discount view {
+  width: 45%;
+  display: inline-block;
+  font-size: 28rpx;
+  color: #fff;
+  background: #2c2d32;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 20rpx;
+}
+
+.discount view + view {
+  margin-left: 10%;
+}
+
+.price {
+  position: relative;
+}
+
+.price .num {
+  font-size: 36rpx;
+  text-align: center;
+  letter-spacing: 4rpx;
+  color: #e1e1e4;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.price .line {
+  width: 15%;
+  height: 2rpx;
+  background: #e1e1e4;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line1 {
+  left: 0;
+}
+
+.line2 {
+  right: 0;
+}
+
+.submitOrder {
+  width: 40%;
+  margin: 0 auto 60rpx;
+  background: #d6f046;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  letter-spacing: 4rpx;
+  border-radius: 20rpx;
+}
+
+.select {
+  background: #d6f046 !important;
+  color: #2c2d32 !important;
+}
+
+.select::after {
+  content: '✔';
+}

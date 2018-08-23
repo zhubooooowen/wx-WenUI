@@ -1,0 +1,59 @@
+/* components/calendar/calendar.wxss */
+
+.weekWrap {
+  width: 100%;
+  position: relative;
+  height: 120rpx;
+  margin: 0 auto;
+}
+
+.month {
+  position: absolute;
+  width: 12.5%;
+  left: 0;
+  height: 120rpx;
+}
+
+.month .name, .month .num {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #d6f046;
+}
+
+.week {
+  position: absolute;
+  width: 87.5%;
+  right: 0;
+}
+
+.day {
+  float: left;
+  color: #e1e1e4;
+  width: 14.2857143%;
+  text-align: center;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.dayWrap {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #d6f046;
+  border-radius: 50%;
+  margin: 0 auto;
+  color: #2c2d32;
+}
+
+.calendarSwiper {
+  position: absolute;
+  width: 87.5%;
+  right: 0;
+  bottom: 0;
+  height: 60rpx;
+  overflow: hidden;
+}

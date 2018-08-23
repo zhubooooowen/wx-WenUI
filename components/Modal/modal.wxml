@@ -1,0 +1,17 @@
+<!--components/Dialog/dialog.wxml-->
+<!-- 封装Modal组件 modal-hidden 和 modal-msg 是 properties 对外暴露的属性 点击按钮 is_modal_Hidden变为true Modal出现 添加 bindModalSure="onMyEvent" 点击确定按钮执行 Modal 组件中为确定绑定的 sure 方法 这个方法会触发 DialogSure 方法 于是 DialogSure 方法就会触发 onMyEvent 方法 并且可以把 Modal 组件的数据传递给当前页面里, Modal 组件中添加 <solt></solt> 则可以在使用时在 <modal></modal> 中插入标签  -->
+<view hidden='{{modalHidden}}'>  
+  <view class='mask_layer' bindtap='modal_click_Hidden' />  
+  <view class='modal_box'>  
+    <view class="title">提示</view>  
+    <view class='content'>  
+      <text class='modalMsg'>{{modalMsg}}</text> 
+      <slot></slot> 
+    </view>  
+    <view class='btn'>  
+      <view bindtap='modal_click_Hidden' class='cancel'>取消</view>  
+      <view bindtap='Sure' class='Sure'>确定</view>  
+    </view>  
+  </view>  
+</view> 
+<toast text="{{'取消成功'}}" isShow="{{is_toast_show}}" interval="2000"></toast> 

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "toast": "/components/Toast/toast",
+    "modal": "/components/Modal/modal"
+  }
+}

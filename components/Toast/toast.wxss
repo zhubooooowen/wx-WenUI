@@ -1,0 +1,21 @@
+/* components/Toast/toast.wxss */
+.toast {
+  position: fixed;
+  line-height: 60rpx;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: #e1e1e4;
+  color: #000;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+  letter-spacing: 2rpx;
+  border-radius: 10rpx;
+  z-index: 10000000;
+}
+
+.toast icon {
+  display: block;
+  margin-top: 20rpx;
+}

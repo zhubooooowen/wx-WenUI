@@ -1,0 +1,7 @@
+<!--components/Toast/toast.wxml-->
+<!-- 封装Toast的组件 text 和 isShow 是组件 properties 对外暴露的属性 点击按钮 is_toast_Show 变为true 此时Toast 出现并且执行 observer(属性被改变时执行的函数) 函数, 函数里的方法是如果isShow 为 true 则2s后变为 false 所以Toast组件会在2s后消失 -->
+<view class='toast' wx:if='{{isShow}}'>
+  <icon type="{{status}}" size="50" wx:if="{{status==='success'}}"/>
+  <icon type="{{status}}" size="50" wx:if="{{status==='warn'}}"/>
+  <view>{{text}}</view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/course/course.wxml-->
+<view>
+  <view class='dateWrap'>
+    <!-- 使用封装的日历组件  -->
+    <calendar bindSelectDate='selectDate'></calendar>
+  </view>
+  <view class='course' wx:for="{{course}}" wx:key="{{item.time}}">
+    <view class="section section_gap">
+      <scroll-view class="scroll-view_H" scroll-x style="width: 100%;white-space:nowrap;">
+        <view class="scroll-view-item_H" wx:for="{{item.list}}" wx:for-item="itemName" wx:key="{{item.time}}" bindtap='toCourseDetails' data-end="{{item.isEnd}}">
+          <image mode='widthFix' src="{{itemName.img}}"></image>
+          <view class='title'>{{itemName.title}}</view>
+          <view class='info'>教练:{{itemName.coach}} 价格:{{itemName.price}}</view>
+          <view class="{{itemName.isEnd?'btn':'btn2'}}" catchtap='toReservation' data-isend="{{itemName.isEnd}}">{{itemName.btn}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<toast text="已经结束了" isShow="{{isShow}}"></toast>

@@ -1,0 +1,160 @@
+/* pages/course/course.wxss */
+
+.dateWrap {
+  width: 94%;
+  margin: 20rpx auto 0;
+  background: #2c2d32;
+  padding: 20rpx 0;
+  border-radius: 20rpx;
+}
+
+.course {
+  width: 94%;
+  margin: 20rpx auto;
+  color: #9da2a9;
+  letter-spacing: 1rpx;
+}
+
+.scroll-view_H {
+  height: 330rpx;
+  margin-top: 30rpx;
+}
+
+.scroll-view-item_H {
+  width: 280rpx;
+  height: 330rpx;
+  background: #2c2d32;
+  display: inline-block;
+  border-radius: 30rpx;
+  position: relative;
+}
+
+.scroll-view-item_H + .scroll-view-item_H {
+  margin-left: 20rpx;
+}
+
+.scroll-view-item_H image {
+  position: absolute;
+  width: 100%;
+  height: 160rpx;
+  top: 0;
+  border-radius: 30rpx 30rpx 0 0;
+}
+
+.scroll-view-item_H view {
+  position: absolute;
+  font-size: 28rpx;
+  padding-left: 10rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  letter-spacing: 2rpx;
+}
+
+.scroll-view-item_H .title {
+  top: 175rpx;
+}
+
+.scroll-view-item_H .info {
+  top: 220rpx;
+  font-size: 24rpx;
+}
+
+.scroll-view-item_H .btn {
+  padding: 0;
+  top: 275rpx;
+  width: 100rpx;
+  background: #7d848e;
+  border-radius: 20rpx;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.scroll-view-item_H .btn2 {
+  padding: 0;
+  top: 275rpx;
+  width: 100rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d6f046;
+  color: #2c2d32;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.checkReservation {
+  width: 70%;
+  height: 58%;
+  background: #9da2a9;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30rpx;
+  z-index: 101;
+}
+
+.checkReservation .title {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: left;
+  color: #2c2d32;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+}
+
+checkbox-group {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #7d848e;
+  border-bottom: 1px solid #7d848e;
+}
+
+.checkbox {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #2c2d32;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+}
+
+.checkbox checkbox {
+  margin-right: 60rpx;
+}
+
+.checkReservation .btnWrap {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.checkReservation .btn {
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #d6f046;
+  font-size: 24rpx;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20rpx;
+}
+
+.checkReservation .btn2 {
+  float: right;
+  background: #2c2d32;
+  color: #e1e1e4;
+}

@@ -1,0 +1,63 @@
+<!--pages/reservation/reservation.wxml-->
+<view class='header'>
+  <image src='https://p3a.pstatp.com/weili/l/208004046442987534.jpg' mode='widthFix'></image>
+  <view>Order</view>
+</view>
+<view class='info'>
+  <view class='item'>
+    <view>
+      课程
+    </view>
+    <view>
+      Hit 力量训练
+    </view>
+  </view>
+  <view class='item'>
+    <view>
+      时间
+    </view>
+    <view>
+      PM 6:00
+    </view>
+  </view>
+  <view class='item'>
+    <view>
+      地点
+    </view>
+    <view>
+      学清嘉创大厦
+    </view>
+  </view>
+  <view class='item stepperWrap'>
+    <view class='stepperTitle'>
+      人数
+    </view>
+    <view class='stepper'>
+      <stepper bindMyAddStep="onMyAddStep" bindMySubtractStep="onMySubtractStep" max="20"></stepper>
+    </view>
+  </view>
+  <view class='item'>
+    <view>
+      总价
+    </view>
+    <view>
+      {{allPrice}}元
+    </view>
+  </view>
+  <view class='discount'>
+    <view class='{{selectMember?"select":""}}' bindtap='selectMember'>
+      会员折扣 8折
+    </view>
+    <view class='{{selectIntegral?"select":""}}' bindtap='selectIntegral'>
+      积分折扣 -4元
+    </view>
+  </view>
+  <view class='price'>
+    <view class='line line1'></view>
+    <view class='num'>最终价:{{finPrice}}元</view>
+    <view class='line line2'></view>
+  </view>
+  <view class='submitOrder'>
+    提交订单
+  </view>
+</view>
