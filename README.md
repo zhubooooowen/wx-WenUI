@@ -1,5 +1,12 @@
 ### 个人小程序组件库
 
+![小程序码](https://github.com/KyrieZbw/wx-WenUI/blob/master/wx.jpg?raw=true)
 
 
-# ![wx](/Users/sf/Desktop/wx-WenUI/wx.jpg)
+
+
+
+
+
+
+
