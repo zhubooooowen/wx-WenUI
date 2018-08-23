@@ -1,6 +1,10 @@
-### 个人小程序组件库
+### 朱博文小程序UI组件库
 
-![小程序码](https://github.com/KyrieZbw/wx-WenUI/blob/master/wx2.jpg?raw=true)
+#### 预览地址:
+
+
+
+![小程序码](https://github.com/KyrieZbw/wx-WenUI/blob/master/wx.jpg?raw=true)
 
 
 
