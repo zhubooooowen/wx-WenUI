@@ -3,7 +3,7 @@ Component({
   properties: {
     isShow: {
       type: Boolean,
-      value: true,
+      value: false,
     },
     title: {
       type: String,
@@ -15,7 +15,7 @@ Component({
     }
   },
   data: {
-    // 这里是一些组件内部数据  
+    // 这里是一些组件内部数据 
   },
   ready: function() {
 
@@ -28,7 +28,7 @@ Component({
       })
     },
     onRedirect(e) {
-      this.triggerEvent('Redirect',e.currentTarget.dataset);
+      this.triggerEvent('Redirect', e.currentTarget.dataset);
     }
   }
 })

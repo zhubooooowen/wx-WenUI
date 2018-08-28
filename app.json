@@ -13,13 +13,14 @@
     "pages/comsPage/comsPage",
     "components/ActionSheet/actionsheet",
     "components/Stepper/stepper",
-    "components/SkidRemove/skidremove",
-    "components/Uploader/uploader"
+    "components/Uploader/uploader",
+    "pages/skidRemove/skidremove"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#2c2d32",
     "navigationBarTitleText": "欧文的文",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#2c2d32"
   }
 }

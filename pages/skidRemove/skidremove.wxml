@@ -1,7 +1,7 @@
-<!--components/SkidRemove/skidremove.wxml-->
-<view class='skidremove'>
+<!--pages/skidRemove/skidremove.wxml-->
+<scroll-view class='skidremoveWrap'>
   <view wx:for="{{list}}" data-index='{{index}}' class='item {{item.active?"active":""}}' bindtouchstart='start' bindtouchmove='move' bindtouchend='end'>
     <view class='title'>{{item.title}}</view>
-    <view class='delete'  data-index='{{index}}' bindtap='deleteItem'>删除</view>
+    <view class='delete' data-index='{{index}}' bindtap='deleteItem'>删除</view>
   </view>
-</view>
+</scroll-view>

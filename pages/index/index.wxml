@@ -28,7 +28,7 @@
         <view class='arrow'>></view>
       </view>
   </view>
-  <view class="mallInfo clearfix {{mall?'show':'hidden'}}">
+  <view class="mallInfo {{mall?'show':'hidden'}}">
     <view class='comList'>
       <view class='item' wx:for="{{componentsList}}" wx:key="{{index}}" data-path="{{item.path}}" bindtap='toComponent'>
         <view class='title'>{{item.name}}</view>

@@ -10,7 +10,6 @@
 } 
 page{
   background: #383941;
-  padding-bottom: 20rpx;
   font-weight: 300;
 }
 

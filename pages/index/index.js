@@ -35,13 +35,9 @@ Page({
         path: 'stepper'
       },
       {
-        name: 'SkidRemove 侧滑删除',
-        path: 'skid'
-      },
-      {
         name: 'Uploader 图片上传',
         path: 'uploader'
-      },
+      }
     ],
     businessComponentsList: [{
         name: '健身课程预约-日历组件',
@@ -50,6 +46,10 @@ Page({
       {
         name: 'wx-charts-图表组件',
         url: '../data/data'
+      },
+      {
+        name: 'skidRemove-侧滑删除(无抖动)',
+        url: '../skidRemove/skidremove'
       }
     ]
   },

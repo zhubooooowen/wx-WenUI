@@ -45,8 +45,8 @@
   </view>
 </view>
 <view wx:if='{{path==="skid"}}' class='item'>
-  <view class='title'>侧滑删除组件</view>
-  <skidremove list="{{skidremoveList}}"></skidremove>
+  <view class='title'>侧滑删除组件(左右滑动上下会抖动)</view>
+  <skidremove list="{{skidremoveList}}" bindmove="onMyMove"></skidremove>
 </view>
 <view wx:if='{{path==="uploader"}}' class='item'>
   <view class='title'>图片上传组件(4张)</view>

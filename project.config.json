@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.93",
 	"appid": "wx9e9df144cc7e9ac0",
-	"projectname": "Fitness",
+	"projectname": "WenUI",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

@@ -1,9 +1,7 @@
 <!--components/Actionsheet/actionsheet.wxml-->
-<view class='actionsheet' wx:if="{{isShow}}">
-  <view class='asMask' bindtap='actionsheetHidden'></view>
-  <view class='wrap'>
-    <view class='title'>{{title}}</view>
-    <view wx:for="{{list}}" class='item' data-url="{{item.url}}" data-tab="{{item.tab}}" bindtap='onRedirect'>{{item.name}}</view>
-    <view class='cancel' bindtap='actionsheetHidden'>取消</view>
-  </view>
+<view class='asMask' bindtap='actionsheetHidden' wx:if="{{isShow}}"></view>
+<view class='wrap {{isShow?"isShow":"isHide"}}'>
+  <view class='title'>{{title}}</view>
+  <view wx:for="{{list}}" class='item' data-url="{{item.url}}" data-tab="{{item.tab}}" bindtap='onRedirect'>{{item.name}}</view>
+  <view class='cancel' bindtap='actionsheetHidden'>取消</view>
 </view>

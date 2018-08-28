@@ -1,5 +1,9 @@
 /**index.wxss**/
 
+page {
+  padding-bottom: 20rpx;
+}
+
 .indexMap {
   width: 100%;
   margin: 0 auto;
@@ -127,6 +131,21 @@
   left: 3%;
   text-align: center;
   width: 94%;
+  animation: move2 2s ease-in-out;
+}
+
+@keyframes move2 {
+  0% {
+    transform: translateY(-300rpx);
+  }
+
+  80% {
+    transform: translateY(100rpx);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .map .info image {

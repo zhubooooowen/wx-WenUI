@@ -21,25 +21,12 @@ Page({
     actionsheetList: [{
         name: '首页',
         url: '../index/index',
-        tab: true
+        tab: false
       },
       {
         name: '结算页',
         url: '../reservation/reservation',
         tab: false
-      }
-    ],
-    skidremoveList: [{
-        title: '侧滑删除-1',
-        active: false
-      },
-      {
-        title: '侧滑删除-2',
-        active: false
-      },
-      {
-        title: '侧滑删除-3',
-        active: false
       }
     ]
   },
@@ -157,6 +144,7 @@ Page({
     })
   },
   onMyRedirect(e) {
+    console.log(e.detail.url);
     this.setData({
       is_actionsheet_Show: false
     })

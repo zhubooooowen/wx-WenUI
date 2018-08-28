@@ -6,7 +6,6 @@
     "progress": "/components/Progress/progress",
     "actionsheet": "/components/ActionSheet/actionsheet",
     "stepper": "/components/Stepper/stepper",
-    "skidremove": "/components/SkidRemove/skidremove",
     "uploader": "/components/Uploader/uploader"
   }
 }
