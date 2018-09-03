@@ -4,7 +4,7 @@
   width: 94%;
   margin: 0 auto;
   border-radius: 20rpx;
-  background: #bbb;
+  background: #2c2d32;
   position: relative;
   margin-bottom: 20rpx;
 }

@@ -1,5 +1,9 @@
 /* pages/reservation/reservation.wxss */
 
+page {
+  padding-bottom: 20rpx;
+}
+
 .header {
   position: relative;
 }
@@ -112,7 +116,7 @@
 
 .submitOrder {
   width: 40%;
-  margin: 0 auto 60rpx;
+  margin: 0 auto 10rpx;
   background: #d6f046;
   text-align: center;
   height: 80rpx;

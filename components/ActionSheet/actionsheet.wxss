@@ -19,6 +19,12 @@
   left: 0;
   transform: translate3d(0, 100%, 0);
   z-index: 10000;
+  background: #e1e1e4;
+}
+
+.wrap .title {
+  border-bottom: 1rpx solid #e1e1e4;
+  font-size: 24rpx;
 }
 
 .wrap view {
@@ -26,11 +32,13 @@
   line-height: 100rpx;
   text-align: center;
   font-size: 28rpx;
-  background: #2c2d32;
+  background: #fff;
+  color: #383941;
 }
 
 .wrap .cancel {
   margin-top: 20rpx;
+  font-weight: 400;
 }
 
 @keyframes show {

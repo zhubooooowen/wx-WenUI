@@ -45,4 +45,5 @@
   text-align: center;
   font-size: 28rpx;
   box-sizing: border-box;
+  color: #e1e1e4;
 }

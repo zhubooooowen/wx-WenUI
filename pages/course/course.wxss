@@ -1,5 +1,9 @@
 /* pages/course/course.wxss */
 
+page {
+  padding-bottom: 10rpx; 
+}
+
 .dateWrap {
   width: 94%;
   margin: 20rpx auto 0;
