@@ -17,7 +17,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  transform: translate3d(0, 100%, 0);
+  transform: translateY(100%);
   z-index: 10000;
   background: #e1e1e4;
 }
@@ -43,11 +43,11 @@
 
 @keyframes show {
   from {
-    transform: translate3d(0, 100%, 0);
+    transform: translateY(100%);
   }
 
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 }
 
@@ -57,11 +57,11 @@
 
 @keyframes hide {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 
   to {
-    transform: translate3d(0, 100%, 0);
+    transform: translateY(100%);
   }
 }
 

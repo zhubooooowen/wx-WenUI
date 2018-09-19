@@ -1,10 +1,10 @@
 // components/Dialog/dialog.js
 Component({
   properties: {
-    modalHidden: {
+    isShow: {
       type: Boolean,
-      value: true
-    }, //这里定义了modalHidden属性，属性值可以在组件使用时指定.写法为modal-hidden  
+      value: false
+    }, //这里定义了isShow属性，属性值可以在组件使用时指定.is-show  
     modalMsg: {
       type: String,
       value: ' ',
@@ -19,7 +19,7 @@ Component({
     // 这里放置自定义方法  
     modal_click_Hidden: function() {
       this.setData({
-        modalHidden: true,
+        isShow: false,
         is_toast_show: true
       })
     },

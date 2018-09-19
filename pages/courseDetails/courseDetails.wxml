@@ -70,7 +70,7 @@
   <view class='reservation' bindtap='toReservation'>预约选中课程</view>
   <view class='reservation' bindtap='toReservation'>全部预约</view>
 </view>
-<modal modal-hidden="{{is_modal_Hidden}}" modal-msg="{{is_modal_Msg}}" bindModalSure="onMyEvent">
+<modal is-show="{{is_modal_show}}" modal-msg="{{is_modal_Msg}}" bindModalSure="onMyEvent">
   <!-- <view class='slot'>这是插入到slot中的内容</view> -->
 </modal>
 <toast text="{{'预约成功'}}" isShow="{{is_toast_show}}" interval="2000"></toast>

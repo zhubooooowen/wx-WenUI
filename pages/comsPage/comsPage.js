@@ -14,7 +14,7 @@ Page({
     is_toast_Show_5s: false,
     is_toast_Show_success: false,
     is_toast_Show_warn: false,
-    is_modal_Hidden: true,
+    is_modal_show: false,
     modal_data: '',
     is_toast_Show_modal: false,
     is_actionsheet_Show: false,
@@ -127,12 +127,12 @@ Page({
   // modal
   showModal() {
     this.setData({
-      is_modal_Hidden: false
+      is_modal_show: true
     })
   },
   onMyEvent(e) {
     this.setData({
-      is_modal_Hidden: true,
+      is_modal_show: false,
       modal_data: e.detail,
       is_toast_Show_modal: true
     })

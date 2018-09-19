@@ -21,7 +21,7 @@
 <view wx:if='{{path==="modal"}}' class='item'>
   <view class='title'>弹框组件</view>
   <button bindtap='showModal'>展示弹框</button>
-  <modal modal-hidden="{{is_modal_Hidden}}" modal-msg="弹框内容" bindModalSure="onMyEvent">
+  <modal is-show="{{is_modal_show}}" modal-msg="弹框内容" bindModalSure="onMyEvent">
     <view class='slot'>这是插入到slot中的内容</view>
   </modal>
   <toast text='{{modal_data}}' isShow="{{is_toast_Show_modal}}"></toast>
