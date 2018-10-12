@@ -96,24 +96,24 @@ Page({
       endY: e.changedTouches[0].pageY
     });
     const direction = this.getSlideDirection(this.data.startX, this.data.startY, this.data.endX, this.data.endY);
+    list.forEach(item=>{
+      item.active = false
+    })
     // 往左滑
     if (direction == 3) {
       this.setData({
         scrollY: false
       })
       list[e.currentTarget.dataset.index].active = true;
-      this.setData({
-        list
-      })
     } else if (direction == 4) {
       this.setData({
         scrollY: false
       })
       list[e.currentTarget.dataset.index].active = false;
-      this.setData({
-        list
-      })
     }
+    this.setData({
+      list
+    })
   },
   end(e) {
     this.setData({

@@ -48,7 +48,7 @@ Page({
         url: '../data/data'
       },
       {
-        name: 'skidRemove-侧滑删除(无抖动)',
+        name: 'skidRemove-侧滑删除',
         url: '../skidRemove/skidremove'
       }
     ]

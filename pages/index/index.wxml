@@ -11,7 +11,7 @@
     <!--小图  -->
     <image bindtap='showBigImg' data-img='3' class="location3 {{showBig.big3?'hide':'show'}}" src='/imgs/location2.png' mode='widthFix'></image>
     <image class="location3-l {{showBig.big3?'show mapScale':'hide'}}" src='/imgs/location.png' mode='widthFix'></image>
-    <view class='address'>WenUI-WeApp</view>
+    <view class='address'>WenUI-WebApp</view>
     <view class='store'>{{location}}</view>
     <view class='info'>
       <image src='/imgs/4.jpg' bindtap='toMine'></image>
@@ -37,7 +37,7 @@
     </view>
   </view>
   <view class='footer'>
-    <view class='title'>WenUI WeApp</view>
+    <view class='title'>WenUI WebApp</view>
     <view class='info'>Copyright © 2016-2018 zhubowen.cn</view>
   </view>
 </view>
