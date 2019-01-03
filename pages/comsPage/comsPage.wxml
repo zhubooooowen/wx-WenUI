@@ -1,4 +1,4 @@
-<!--pages/comPages/comPages.wxml-->
+<!-- 进度条组件 -->
 <view wx:if='{{path==="progress"}}' class='item'>
   <view class='title'>进度条组件</view>
   <progress percentage="{{percentage2}}"></progress>
@@ -7,6 +7,7 @@
   <progress percentage="{{percentage}}" background="orange"></progress>
   <button bindtap='changeProgress'>更改进度</button>
 </view>
+<!-- 轻提示组件 -->
 <view wx:if='{{path==="toast"}}' class='item'>
   <view class='title'>轻提示组件</view>
   <button bindtap='showToast'>提示</button>
@@ -18,6 +19,7 @@
   <button bindtap='showToastWarn'>提示(警告)</button>
   <toast text='这是一个警告提示' isShow="{{is_toast_Show_warn}}" status="warn"></toast>
 </view>
+<!-- 弹框组件 -->
 <view wx:if='{{path==="modal"}}' class='item'>
   <view class='title'>弹框组件</view>
   <button bindtap='showModal'>展示弹框</button>
@@ -26,12 +28,14 @@
   </modal>
   <toast text='{{modal_data}}' isShow="{{is_toast_Show_modal}}"></toast>
 </view>
+<!-- 上拉菜单组件 -->
 <view wx:if='{{path==="actionsheet"}}' class='item actionsheet'>
   <view class='title'>上拉菜单组件</view>
   <button class='asButton' bindtap='showActionsheet'>退出登录</button>
   <actionsheet isShow="{{is_actionsheet_Show}}" title="退出后不会删除任何历史数据,下次登录依然可以使用本帐号" list="{{actionsheetList}}" bindRedirect="onMyRedirect">
   </actionsheet>
 </view>
+<!-- 步进器组件 -->
 <view wx:if='{{path==="stepper"}}' class='myStepper'>
   <view class='title'>步进器组件</view>
   <view class='tip'>基础用法(step为1,最小值为1,最大值为10)</view>
@@ -44,11 +48,8 @@
     <stepper bindMyAddStep="onMyAddStep" bindMySubtractStep="onMySubtractStep" min="5" max="100" step="5" initialValue="20"></stepper>
   </view>
 </view>
-<view wx:if='{{path==="skid"}}' class='item'>
-  <view class='title'>侧滑删除组件(左右滑动上下会抖动)</view>
-  <skidremove list="{{skidremoveList}}" bindmove="onMyMove"></skidremove>
-</view>
+<!-- 图片上传组件 -->
 <view wx:if='{{path==="uploader"}}' class='item'>
-  <view class='title'>图片上传组件(4张)</view>
-  <uploader num="4" bindUpload="onMyUpload"></uploader>
+  <view class='title'>图片上传组件(9张)</view>
+  <uploader num="9" bindUpload="onMyUpload"></uploader>
 </view>

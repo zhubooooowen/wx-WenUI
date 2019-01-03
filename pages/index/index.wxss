@@ -173,7 +173,7 @@ page {
   z-index: 10000;
 }
 
-.record {
+.businessSelect {
   line-height: 60rpx;
   text-align: center;
   flex: 1;
@@ -182,7 +182,7 @@ page {
   border-radius: 0 10rpx 10rpx 0;
 }
 
-.mall {
+.basisSelect {
   line-height: 60rpx;
   text-align: center;
   color: #383941;
@@ -208,12 +208,12 @@ page {
   display: none;
 }
 
-.recordInfo {
+.business {
   width: 94%;
   margin: 20rpx auto;
 }
 
-.mallInfo {
+.basis {
   width: 94%;
   margin: 20rpx auto;
   margin-bottom: 0;
@@ -247,8 +247,12 @@ page {
 }
 
 .item .arrow {
+  position: absolute;
   right: 3%;
-  font-weight: 700;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30rpx;
+  height: 30rpx;
 }
 
 .item:last-child {

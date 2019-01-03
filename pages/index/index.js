@@ -1,5 +1,4 @@
 //index.js
-//获取应用实例
 const app = getApp()
 
 Page({
@@ -12,8 +11,8 @@ Page({
     },
     location: '个人组件库',
     imgUrl: '',
-    record: false,
-    mall: true,
+    business: false,
+    basis: true,
     componentsList: [{
         name: 'Progress 进度条',
         path: 'progress'
@@ -93,16 +92,16 @@ Page({
       })
     }
   },
-  record: function(e) {
+  business: function(e) {
     this.setData({
-      mall: false,
-      record: true
+      basis: false,
+      business: true
     })
   },
-  mall: function(e) {
+  basis: function(e) {
     this.setData({
-      record: false,
-      mall: true
+      business: false,
+      basis: true
     })
   },
   selectDate(data) {

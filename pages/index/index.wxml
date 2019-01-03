@@ -19,20 +19,20 @@
     </view>
   </view>
   <view class="nav">
-    <view class="mall {{mall?'select':'default'}}" bindtap="mall">基础组件</view>
-    <view class="record {{record?'select':'default'}}" bindtap="record">业务组件</view>
+    <view class="basisSelect {{basis?'select':'default'}}" bindtap="basis">基础组件</view>
+    <view class="businessSelect {{business?'select':'default'}}" bindtap="business">业务组件</view>
   </view>
-  <view class="recordInfo {{record?'show':'hidden'}}">
-      <view class='item' wx:for="{{businessComponentsList}}" wx:key="{{index}}" data-url="{{item.url}}" bindtap='tobusinessComponent'>
-        <view class='title'>{{item.name}}</view>
-        <view class='arrow'>></view>
-      </view>
+  <view class="business {{business?'show':'hidden'}}">
+    <view class='item' wx:for="{{businessComponentsList}}" wx:key="{{index}}" data-url="{{item.url}}" bindtap='tobusinessComponent'>
+      <view class='title'>{{item.name}}</view>
+      <image class='arrow' src='/imgs/arrow.png'></image>
+    </view>
   </view>
-  <view class="mallInfo {{mall?'show':'hidden'}}">
+  <view class="basis {{basis?'show':'hidden'}}">
     <view class='comList'>
       <view class='item' wx:for="{{componentsList}}" wx:key="{{index}}" data-path="{{item.path}}" bindtap='toComponent'>
         <view class='title'>{{item.name}}</view>
-        <view class='arrow'>></view>
+        <image class='arrow' src='/imgs/arrow.png'></image>
       </view>
     </view>
   </view>

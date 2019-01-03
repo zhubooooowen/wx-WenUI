@@ -56,7 +56,7 @@
 .info .card .cardInfo{
   position: absolute;
   left: 30rpx;
-  bottom: 30rpx;
+  bottom: 25rpx;
   text-align: left;
   font-size: 24rpx;
   letter-spacing: 2rpx;
@@ -90,9 +90,8 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 20rpx;
+  bottom: 25rpx;
   font-size: 24rpx;
-  border: 1rpx solid #383941;
   letter-spacing: 4rpx;
   color: #383941;
   font-weight: 400;
