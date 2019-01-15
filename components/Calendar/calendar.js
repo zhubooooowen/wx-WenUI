@@ -26,6 +26,7 @@ Component({
     },
     indicatorDots: false,
     autoplay: false,
+    duration: 300,
   },
   ready: function() {
     var Nowdate = new Date();
