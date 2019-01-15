@@ -68,6 +68,8 @@
 
 ![小程序码](https://github.com/KyrieZbw/wx-WenUI/blob/master/date.jpg?raw=true)
 
+#### 持续更新中...
+
 #### 预览地址:
 
 

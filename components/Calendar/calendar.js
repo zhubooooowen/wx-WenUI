@@ -26,10 +26,8 @@ Component({
     },
     indicatorDots: false,
     autoplay: false,
-    interval: 5000,
-    duration: 300,
   },
-  ready: function () {
+  ready: function() {
     var Nowdate = new Date();
     // 获取这周一的日期和所在的月份
     var WeekFirstDay = new Date(Nowdate - (Nowdate.getDay() - 1) * 86400000);
@@ -55,7 +53,7 @@ Component({
     var monthLastDay = new Date(nextMonthFirstDay - oneDay).getDate();
     console.log(monthLastDay);
     // 获取上个月的天数
-    var getLastMonthDays = function () {
+    var getLastMonthDays = function() {
       var now = new Date;
       now.setMonth(now.getMonth() - 1);
       now.setDate(1);
@@ -80,73 +78,48 @@ Component({
     }
     console.log(getThisMonthDays());
     var thisMonthDays = getThisMonthDays();
-    // 这一周的日期和月份
-    for (let i = -1; i < 6; i++) {
-      // 判断这周第一天(周一)加上i是否大于这个月的天数,大于就减去这个月的天数
-      var day;
-      if (WeekFirstDay.getDate() + i > thisMonthDays) {
-        day = WeekFirstDay.getDate() + i - thisMonthDays;
-      } else {
-        day = WeekFirstDay.getDate() + i;
+    // 设置四周的日期
+    function setDate(first, last, weekObj, month) {
+      // 判断上周日到这周六的日期 
+      for (let i = first - 1; i < last - 1; i++) {
+        var day;
+        // 判断这周第一天(周一)加上i是否大于这个月的天数,大于就减去这个月的天数
+        if (WeekFirstDay.getDate() + i > thisMonthDays) {
+          day = WeekFirstDay.getDate() + i - thisMonthDays;
+        } else {
+          day = WeekFirstDay.getDate() + i;
+        }
+        weekObj.week.push(day);
       }
-      this.data.thisWeek.week.push(day);
-    }
-    for (let i = 0; i < 7; i++) {
-      this.data.thisWeek.month.push(this.data.month[nextFourWeekDays[i] - 1])
-    }
-    // 下一周的日期和月份
-    for (let i = 6; i < 13; i++) {
-      var day;
-      if (WeekFirstDay.getDate() + i > thisMonthDays) {
-        day = WeekFirstDay.getDate() + i - thisMonthDays;
-      } else {
-        day = WeekFirstDay.getDate() + i;
+      for (let i = first; i < last; i++) {
+        weekObj.month.push(month[nextFourWeekDays[i] - 1])
       }
-      this.data.nextWeek.week.push(day);
     }
-    for (let i = 7; i < 14; i++) {
-      this.data.nextWeek.month.push(this.data.month[nextFourWeekDays[i] - 1])
-    }
-    // 下下一周的日期和月份
-    for (let i = 13; i < 20; i++) {
-      var day;
-      if (WeekFirstDay.getDate() + i > thisMonthDays) {
-        day = WeekFirstDay.getDate() + i - thisMonthDays;
-      } else {
-        day = WeekFirstDay.getDate() + i;
-      }
-      this.data.thirdWeek.week.push(day);
-    }
-    for (let i = 14; i < 21; i++) {
-      this.data.thirdWeek.month.push(this.data.month[nextFourWeekDays[i] - 1])
-    }
-    // 下下下一周的日期和月份
-    for (let i = 20; i < 27; i++) {
-      var day;
-      if (WeekFirstDay.getDate() + i > thisMonthDays) {
-        day = WeekFirstDay.getDate() + i - thisMonthDays;
-      } else {
-        day = WeekFirstDay.getDate() + i;
-      }
-      this.data.fourthWeek.week.push(day);
-    }
-    for (let i = 21; i < 28; i++) {
-      this.data.fourthWeek.month.push(this.data.month[nextFourWeekDays[i] - 1])
-    }
+    const {
+      thisWeek,
+      nextWeek,
+      thirdWeek,
+      fourthWeek,
+      month,
+      thisDay
+    } = this.data;
+    setDate(0, 7, thisWeek, month);
+    setDate(7, 14, nextWeek, month);
+    setDate(14, 21, thirdWeek, month);
+    setDate(21, 28, fourthWeek, month);
     this.setData({
-      month: this.data.month[M - 1],
-      thisWeek: this.data.thisWeek,
+      month: month[M - 1],
+      thisWeek,
       thisDay: Nowdate.getDate(),
-      nextWeek: this.data.nextWeek,
-      thirdWeek: this.data.thirdWeek,
-      fourthWeek: this.data.fourthWeek
+      nextWeek,
+      thirdWeek,
+      fourthWeek
     })
-    console.log(this.data.thisWeek, this.data.thisDay, this.data.nextWeek,
-      this.data.thirdWeek, this.data.fourthWeek);
+    console.log(thisWeek, thisDay, nextWeek, thirdWeek, fourthWeek);
   },
   methods: {
     // 这里放置自定义方法 
-    chooseDay: function (e) {
+    chooseDay: function(e) {
       // 是否添加圆形背景是通过判断thisDay==对应日期的,把每一项的id设为日期,这样点击谁就把thisDay设置为谁的id
       // console.log(e.target);
       this.setData({
@@ -156,4 +129,4 @@ Component({
       this.triggerEvent('SelectDate', e.target);
     },
   }
-})  
+})
