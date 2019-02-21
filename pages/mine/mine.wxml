@@ -1,20 +1,15 @@
-<!--pages/mine/mine.wxml-->
-<view class='info'>
-  <image class='bg' mode='widthFix' src='/imgs/5.png'></image>
-  <view class='card'>
-    <image mode='widthFix' src='/imgs/card.png'></image>
-    <view class='left'>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <button class='btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">开通</button>
-    </view>
-    <view class='title'>
-      会员卡
-      <view>Membership Card</view>
-    </view>
-    <view class='idea'>Any Time Any Fitness</view>
-    <view class='cardInfo'>
-      <view>8折优惠卡</view>
-      <view>积分余额:4000</view>
+<view class='wrap'>
+  <input placeholder='尽情的留言吧' bindinput='handleInput' value="{{message}}" />
+  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" bindtap='leaveMessage'>留言</button>
+</view>
+
+
+<scroll-view class='messageWrap' scroll-y>
+  <view class='message' wx:for="{{messageList}}" wx:key="{{index}}">
+    <image src='{{item.avatarUrl}}'></image>
+    <view>
+      <view class='name'>{{item.nickName}}</view>
+      <view class='content'>{{item.message}}</view>
     </view>
   </view>
-</view>
+</scroll-view>

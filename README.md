@@ -68,7 +68,7 @@
 
 ![小程序码](https://github.com/KyrieZbw/wx-WenUI/blob/master/date.jpg?raw=true)
 
-#### 持续更新中...
+#### 新增云开发留言板   持续更新中...
 
 #### 预览地址:
 

@@ -66,6 +66,6 @@
     <view class='line line2'></view>
   </view>
   <view class='submitOrder'>
-    提交订单
+    提交课程
   </view>
 </view>

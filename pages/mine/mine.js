@@ -1,70 +1,91 @@
-//获取应用实例
-const app = getApp()
+const db = wx.cloud.database()
+
 Page({
   data: {
+    avatarUrl: '',
     userInfo: {},
-    record: false,
-    mall: true,
-    componentsList: [{
-        name: 'Progress 进度条',
-        path: 'progress'
-      },
-      {
-        name: 'Toast 轻提示',
-        path: 'toast'
-      },
-      {
-        name: 'Modal 弹框',
-        path: 'modal'
-      },
-      {
-        name: 'Actionsheet 上拉菜单',
-        path: 'actionsheet'
-      },
-      {
-        name: 'Stepper 步进器',
-        path: 'stepper'
-      },
-      {
-        name: 'SkidRemove 侧滑删除',
-        path: 'skid'
-      },
-    ]
+    logged: false,
+    message: '',
+    messageList: [],
   },
   onLoad: function(options) {
-    if (app.globalData.userInfo) {
+    // 获取用户信息
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              this.setData({
+                logged: true,
+                avatarUrl: res.userInfo.avatarUrl,
+                userInfo: res.userInfo
+              })
+            }
+          })
+        }
+      }
+    })
+  },
+  onShow() {
+    this.getMessage();
+  },
+  getMessage() {
+    const that = this;
+    wx.showLoading();
+    wx.cloud.callFunction({
+      name: 'getMessage',
+      data: {},
+      success(res) {
+        that.setData({
+          messageList: res.result.data.reverse()
+        })
+        wx.hideLoading()
+      },
+      fail: console.error
+    })
+  },
+  onGetUserInfo: function(e) {
+    if (!this.data.logged && e.detail.userInfo) {
       this.setData({
-        userInfo: app.globalData.userInfo
+        logged: true,
+        avatarUrl: e.detail.userInfo.avatarUrl,
+        userInfo: e.detail.userInfo
       })
     }
   },
-  onGotUserInfo: function(e) {
-    console.log(e.detail.userInfo)
+  handleInput(e) {
     this.setData({
-      userInfo: e.detail.userInfo
-    })
-    app.globalData.userInfo = e.detail.userInfo;
-  },
-
-  record: function(e) {
-    this.setData({
-      mall: false,
-      record: true
+      message: e.detail.value
     })
   },
-  mall: function(e) {
-    this.setData({
-      record: false,
-      mall: true
-    })
+  leaveMessage() {
+    const {
+      logged,
+      message,
+      userInfo
+    } = this.data;
+    console.log(userInfo);
+    if (logged && message) {
+      wx.showLoading({
+        title: '留言中',
+      });
+      wx.cloud.callFunction({
+        name: 'leaveMessage',
+        data: {
+          message,
+          nickName: userInfo.nickName,
+          avatarUrl: userInfo.avatarUrl,
+          gender: userInfo.gender
+        },
+        complete: res => {
+          this.setData({
+            message: ''
+          })
+          this.getMessage();
+          wx.hideLoading();
+        }
+      })
+    }
   },
-  selectDate(data) {
-    console.log(data.detail);
-  },
-  toComponent(e) {
-    console.log(e);
-    wx.navigateTo({
-      url: '../comsPage/comsPage?path=' + e.currentTarget.dataset.path
-    })
-  }
 })

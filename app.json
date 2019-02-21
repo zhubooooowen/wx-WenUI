@@ -22,5 +22,6 @@
     "navigationBarTitleText": "欧文的文",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#2c2d32"
-  }
+  },
+  "cloud": true
 }

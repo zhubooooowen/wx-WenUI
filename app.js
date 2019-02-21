@@ -12,6 +12,15 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+    if (!wx.cloud) {
+      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
+    } else {
+      wx.cloud.init({
+        env:'dev-3127da',
+        traceUser: true,
+      })
+    }
   },
   globalData: {
     userInfo: null

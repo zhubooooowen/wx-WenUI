@@ -127,25 +127,10 @@ page {
 
 .map .info {
   position: absolute;
-  top: 740rpx;
+  top: 400rpx;
   left: 3%;
   text-align: center;
   width: 94%;
-  animation: move2 2s ease-in-out;
-}
-
-@keyframes move2 {
-  0% {
-    transform: translateY(-300rpx);
-  }
-
-  80% {
-    transform: translateY(100rpx);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .map .info image {
@@ -168,7 +153,7 @@ page {
   display: flex;
   flex-direction: row;
   margin-left: 3vw;
-  margin-top: 20rpx;
+  margin-top: -500rpx;
   position: relative;
   z-index: 10000;
 }

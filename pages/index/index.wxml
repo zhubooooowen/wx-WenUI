@@ -15,7 +15,7 @@
     <view class='store'>{{location}}</view>
     <view class='info'>
       <image src='/imgs/4.jpg' bindtap='toMine'></image>
-      <view>朱博文的个人UI组件库</view>
+      <view>点击头像有惊喜</view>
     </view>
   </view>
   <view class="nav">
