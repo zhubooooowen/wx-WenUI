@@ -14,8 +14,11 @@
     <view class='address'>WenUI-WeApp</view>
     <view class='store'>{{location}}</view>
     <view class='info'>
-      <image src='/imgs/4.jpg' bindtap='toMine'></image>
-      <view>点击头像有惊喜</view>
+      <image src='/imgs/4.jpg'></image>
+      <view class='btnWrap'>
+        <button bindtap='toMessage'>留言</button>
+        <button bindtap='toAlbum'>相册</button>
+      </view>
     </view>
   </view>
   <view class="nav">

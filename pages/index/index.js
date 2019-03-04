@@ -53,11 +53,6 @@ Page({
     ]
   },
   onLoad: function() {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo
-      })
-    }
   },
   showBigImg: function(e) {
     if (e.target.dataset.img == 2) {
@@ -118,9 +113,14 @@ Page({
       url: e.currentTarget.dataset.url
     })
   },
-  toMine() {
+  toMessage() {
     wx.navigateTo({
-      url: '../mine/mine'
+      url: '../message/message'
+    })
+  },
+  toAlbum() {
+    wx.navigateTo({
+      url: '../album/album'
     })
   }
 })

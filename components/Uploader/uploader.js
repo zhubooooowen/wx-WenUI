@@ -1,4 +1,3 @@
-// components/Uploader/uploader.js
 Component({
   properties: {
     num: {
@@ -24,17 +23,24 @@ Component({
         sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
         success: function(res) {
           // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+          that.setData({
+            num: that.data.num - res.tempFilePaths.length
+          }, () => {
+            if (that.data.num === 0) {
+              that.setData({
+                isShowBtn: false
+              })
+            }
+          })
+
           res.tempFilePaths.forEach(item => {
             that.data.tempFilePaths.push(item);
           })
+
           that.setData({
             tempFilePaths: that.data.tempFilePaths
           })
-          if (that.data.tempFilePaths.length === that.data.num) {
-            that.setData({
-              isShowBtn: false
-            })
-          }
+
           that.triggerEvent('Upload', that.data.tempFilePaths);
         }
       })

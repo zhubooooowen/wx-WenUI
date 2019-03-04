@@ -1,0 +1,8 @@
+<view class='album'>
+  <view class='item' wx:for="{{imagePaths}}" data-url="{{item}}" bindtap='previewImage'>
+    <image src='{{item}}' mode='aspectFill'></image>
+  </view>
+  <view class='item' bindtap='uploadImg' wx:if="{{showBtn}}">
+    <text>+</text>
+  </view>
+</view>

@@ -1,5 +1,3 @@
-const db = wx.cloud.database()
-
 Page({
   data: {
     avatarUrl: '',
@@ -85,6 +83,11 @@ Page({
           this.getMessage();
           wx.hideLoading();
         }
+      })
+    } else {
+      wx.showToast({
+        title: '内容不能为空',
+        icon: 'none',
       })
     }
   },

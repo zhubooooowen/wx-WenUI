@@ -140,11 +140,24 @@ page {
   margin-bottom: 20rpx;
 }
 
-.map .info view {
+.map .info .btnWrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 360rpx;
+  height: 60rpx;
+  margin: 0 auto;
+}
+
+.map .info button {
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
   font-size: 28rpx;
-  color: #d6f046;
+  background: #d6f046;
   text-align: center;
   letter-spacing: 4rpx;
+  color: #383941;
 }
 
 .nav {

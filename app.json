@@ -4,7 +4,7 @@
     "pages/courseDetails/courseDetails",
     "pages/data/data",
     "pages/reservation/reservation",
-    "pages/mine/mine",
+    "pages/message/message",
     "pages/course/course",
     "components/Modal/modal",
     "components/Toast/toast",
@@ -14,7 +14,8 @@
     "components/ActionSheet/actionsheet",
     "components/Stepper/stepper",
     "components/Uploader/uploader",
-    "pages/skidRemove/skidremove"
+    "pages/skidRemove/skidremove",
+    "pages/album/album"
   ],
   "window": {
     "backgroundTextStyle": "light",
