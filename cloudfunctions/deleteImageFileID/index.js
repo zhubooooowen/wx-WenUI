@@ -9,9 +9,9 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
 
-  return await db.collection('imageFileID').add({
-    data: {
-      fileID: event.fileID
+  return await db.collection('imageFileID').doc(event._id).remove({
+    success(res) {
+      console.log(res.data)
     }
   })
 }

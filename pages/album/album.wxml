@@ -1,8 +1,12 @@
 <view class='album'>
-  <view class='item' bindtap='uploadImg' wx:if="{{showBtn}}">
+  <view class='item' bindtap='uploadImg' wx:if="{{isShow}}">
     <text>+</text>
   </view>
-  <view class='item' wx:for="{{imagePaths}}" data-url="{{item}}" bindtap='previewImage'>
+  <view class='item {{isShake?"shake":""}}' wx:for="{{compressImagePaths}}" data-url="{{item}}" data-imagedata="{{fileIDList[index]}}" data-index="{{index}}" bindtap='handleImage' bindlongtap='showDelete'>
     <image src='{{item}}' mode='aspectFill' lazy-load="{{true}}"></image>
+    <view wx:if="{{isShake}}" class='deleteMask'>删除</view>
+  </view>
+  <view class='item' wx:if="{{isShow && compressImagePaths.length > 0}}" bindtap='handleDelete'>
+    <text>-</text>
   </view>
 </view>
