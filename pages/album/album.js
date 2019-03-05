@@ -21,17 +21,21 @@ Page({
   },
   getImageList() {
     const that = this;
-    wx.showLoading();
+    wx.showLoading({
+      title: '图片加载中',
+    })
     wx.cloud.callFunction({
       name: 'getImageFileID',
       data: {},
       success(res) {
         if (res.result) {
-          res.result.data.forEach((item, i) => {
+          let i = 0;
+          // 递归依次按顺序加载图片
+          (function downloadImage() {
             wx.cloud.downloadFile({
-              fileID: item.fileID, // 文件 ID
+              fileID: res.result.data[i].fileID, // 文件 ID
               success: ress => {
-                that.data.imagePaths.push(ress.tempFilePath);
+                that.data.imagePaths.unshift(ress.tempFilePath);
                 that.setData({
                   imagePaths: that.data.imagePaths
                 })
@@ -39,9 +43,15 @@ Page({
                   wx.hideLoading()
                 }
               },
-              fail: console.error
+              fail: console.error,
+              complete: () => {
+                if (i < res.result.data.length - 1) {
+                  i++;
+                  downloadImage();
+                }
+              }
             })
-          })
+          })();
         } else {
           wx.hideLoading();
           wx.showToast({
@@ -64,12 +74,16 @@ Page({
         wx.showLoading({
           title: '上传中',
         });
-        res.tempFilePaths.forEach(item => {
-          that.data.imagePaths.push(item);
+        res.tempFilePaths.forEach(item=>{
+          that.data.imagePaths.unshift(item);
           that.setData({
             imagePaths: that.data.imagePaths
           })
-          const filePath = item;
+        })
+        let i = 0;
+        (function uploadImage(){
+          const list = res.tempFilePaths;
+          const filePath = list[i];
           const date = new Date().getTime();
           // 上传图片
           const cloudPath = 'image' + date;
@@ -85,7 +99,10 @@ Page({
                   cloudPath,
                 },
                 complete: res => {
-                  console.log(res);
+                  if (i < list.length -1){
+                    i++;
+                    uploadImage();
+                  }
                 }
               })
             },
@@ -100,7 +117,7 @@ Page({
               wx.hideLoading()
             }
           })
-        })
+        })()
       }
     })
   },
