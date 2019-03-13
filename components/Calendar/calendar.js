@@ -1,4 +1,3 @@
-// components/calendar/calendar.js
 Component({
   properties: {
 
@@ -32,43 +31,28 @@ Component({
     var Nowdate = new Date();
     // 获取这周一的日期和所在的月份
     var WeekFirstDay = new Date(Nowdate - (Nowdate.getDay() - 1) * 86400000);
+    // 月份
     var M = Number(WeekFirstDay.getMonth()) + 1
     console.log(M, WeekFirstDay.getDate() - 1);
     // 获取当前日期的月份
     var thisMonth = Nowdate.getMonth() + 1;
-    console.log(thisMonth);
+    // console.log(thisMonth);
     // 获取这周末的日期
     var WeekLastDay = new Date((WeekFirstDay / 1000 + 6 * 86400) * 1000);
-    console.log(WeekFirstDay, WeekLastDay);
+    // console.log(WeekFirstDay, WeekLastDay);
     var nextFourWeekDays = [];
     // 获取上周日开始未来28天的月份
     for (let i = -1; i < 27; i++) {
       nextFourWeekDays.push(new Date((WeekFirstDay / 1000 + i * 86400) * 1000).getMonth() + 1)
     }
-    console.log(nextFourWeekDays);
+    // console.log(nextFourWeekDays);
     // 获取这个月的最后一天
     var currentMonth = Nowdate.getMonth();
     var nextMonth = ++currentMonth;
     var nextMonthFirstDay = new Date(Nowdate.getFullYear(), nextMonth, 1);
     var oneDay = 1000 * 60 * 60 * 24;
     var monthLastDay = new Date(nextMonthFirstDay - oneDay).getDate();
-    console.log(monthLastDay);
-    // 获取上个月的天数
-    var getLastMonthDays = function() {
-      var now = new Date;
-      now.setMonth(now.getMonth() - 1);
-      now.setDate(1);
-      var next = new Date;
-      next.setDate(1);
-      var arr = [];
-      while (now < next) {
-        arr.push(now.getDate());
-        now.setDate(now.getDate() + 1);
-      }
-      return arr;
-    }
-    var lastMonthDays = getLastMonthDays().length;
-    console.log(lastMonthDays);
+    // console.log(monthLastDay);
     // 获取这个月的天数
     function getThisMonthDays() {
       var date = new Date();
