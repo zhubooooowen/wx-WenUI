@@ -6,6 +6,7 @@ Page({
     message: '',
     messageList: [],
   },
+  onShareAppMessage: function() {},
   onLoad: function(options) {
     // 获取用户信息
     wx.getSetting({

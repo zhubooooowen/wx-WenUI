@@ -1,4 +1,3 @@
-//index.js
 const app = getApp()
 
 Page({
@@ -52,8 +51,8 @@ Page({
       }
     ]
   },
-  onLoad: function() {
-  },
+  onLoad: function() {},
+  onShareAppMessage: function() {},
   showBigImg: function(e) {
     if (e.target.dataset.img == 2) {
       this.setData({

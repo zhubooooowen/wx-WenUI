@@ -8,7 +8,7 @@ Page({
     selectMember: true, // 是否选中会员
     selectIntegral: false // 是否选中积分
   },
-  onLoad: function (options) {
+  onLoad: function(options) {
     // 如果会员
     if (this.data.selectMember) {
       this.data.finPrice = this.data.allPrice * this.data.memberOff;
@@ -65,7 +65,7 @@ Page({
   },
 
   // 会员折扣
-  selectMember: function () {
+  selectMember: function() {
     this.setData({
       selectMember: !this.data.selectMember,
       selectIntegral: false
@@ -84,7 +84,7 @@ Page({
     }
   },
   // 积分折扣
-  selectIntegral: function () {
+  selectIntegral: function() {
     this.setData({
       selectIntegral: !this.data.selectIntegral,
       selectMember: false

@@ -13,6 +13,7 @@ Page({
     // 是否抖动
     isShake: false,
   },
+  onShareAppMessage: function() {},
   onLoad() {
     const that = this;
     wx.cloud.callFunction({
@@ -161,8 +162,13 @@ Page({
     })
   },
   handleImage(e) {
-    const { index } = e.currentTarget.dataset;
-    const { _id, fileID } = e.currentTarget.dataset.imagedata;
+    const {
+      index
+    } = e.currentTarget.dataset;
+    const {
+      _id,
+      fileID
+    } = e.currentTarget.dataset.imagedata;
     if (!this.data.isShake) {
       wx.previewImage({
         current: e.currentTarget.dataset.url, // 当前显示图片的http链接
