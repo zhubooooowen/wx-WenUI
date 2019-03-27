@@ -76,7 +76,7 @@
 
 
 
-![小程序码](https://github.com/KyrieZbw/wx-WenUI/blob/master/wx.jpg?raw=true)
+![小程序码](https://github.com/zhubooooowen/wx-WenUI/blob/master/wx.jpg?raw=true)
 
 
 
