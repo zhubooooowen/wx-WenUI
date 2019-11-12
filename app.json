@@ -24,5 +24,6 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#2c2d32"
   },
-  "cloud": true
+  "cloud": true,
+  "sitemapLocation": "sitemap.json"
 }

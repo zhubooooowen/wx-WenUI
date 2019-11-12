@@ -13,6 +13,8 @@
 	"appid": "wx9e9df144cc7e9ac0",
 	"projectname": "WenUI",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

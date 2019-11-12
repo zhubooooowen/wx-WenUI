@@ -1,6 +1,6 @@
 <!--pages/courseDatiles/courseDetails.wxml-->
 <view class='courseVideo'>
-  <image src='https://p3a.pstatp.com/weili/l/208004046442987534.jpg' mode='widthFix'></image>
+  <image src='http://zhubowen.cn/image/girl.jpg' mode='widthFix'></image>
 </view>
 <view class='introduce'>
   <image src='/imgs/4.jpg'></image>

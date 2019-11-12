@@ -1,6 +1,6 @@
 <!--pages/reservation/reservation.wxml-->
 <view class='header'>
-  <image src='https://p3a.pstatp.com/weili/l/208004046442987534.jpg' mode='widthFix'></image>
+  <image src='http://zhubowen.cn/image/girl.jpg' mode='widthFix'></image>
   <view>Order</view>
 </view>
 <view class='info'>
